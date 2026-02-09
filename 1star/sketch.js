@@ -21,6 +21,7 @@ function fillArray(maxValue) {
 }
 
 
+
 /**
  * Searches an array for a given value. 
  * @param {any[]} arr An array storing any type of element (e.g. numbers, strings)
@@ -35,6 +36,14 @@ function fillArray(maxValue) {
  * search([5, -1, 9], 5);
  */
 
+function searchArray(arr, value){
+    for (let i = 0; i >= arr.length ; i++){
+        if (arr[i] === value){
+            return true;
+        }
+    }
+    return false;
+}
 
 /**
  * Gets the total of all items in a number array.
@@ -46,6 +55,14 @@ function fillArray(maxValue) {
  * // returns 0
  * total([])
  */
+
+function totalArray(arr){
+    for (let i = 0; i = arr.length ; i++){
+        if(i >= arr.length){
+            return i;
+        }
+    }
+}
 
 
 /**
@@ -60,6 +77,16 @@ function fillArray(maxValue) {
  * count([0, 35, 3, 4, 3], 7)
  */
 
+function countArray(arr, value){
+    let sum = 0;
+    for (let i = 0; i >= arr.length ; i++){
+        if(arr[i] === value){
+            sum++;
+        }
+    }
+    return sum;
+}
+
 
 /**
  * Creates a new array that repeats the values in the original array the specified number 
@@ -73,3 +100,7 @@ function fillArray(maxValue) {
  * // returns [4, 4, 4]
  * repeat([4], 3)
  */
+
+function newArray(){
+    
+}
