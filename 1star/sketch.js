@@ -1,5 +1,9 @@
 function setup() {
     createCanvas(400, 300);
+    fillArray();
+    search();
+    total();
+    count();
 }
 
 
@@ -36,14 +40,16 @@ function fillArray(maxValue) {
  * search([5, -1, 9], 5);
  */
 
-function searchArray(arr, value){
-    for (let i = 0; i >= arr.length ; i++){
+function search(arr, value){
+    for (let i = 0; i < arr.length; i++){
         if (arr[i] === value){
             return true;
         }
     }
     return false;
 }
+
+
 
 /**
  * Gets the total of all items in a number array.
@@ -56,12 +62,12 @@ function searchArray(arr, value){
  * total([])
  */
 
-function totalArray(arr){
-    for (let i = 0; i = arr.length ; i++){
-        if(i >= arr.length){
-            return i;
-        }
+function total(arr){
+    let sum = 0;
+    for (let i = 0; i < arr.length ; i++){
+        sum = sum + arr[i];
     }
+    return sum;
 }
 
 
@@ -77,9 +83,9 @@ function totalArray(arr){
  * count([0, 35, 3, 4, 3], 7)
  */
 
-function countArray(arr, value){
+function count(arr, value){
     let sum = 0;
-    for (let i = 0; i >= arr.length ; i++){
+    for (let i = 0; i <= arr.length ; i++){
         if(arr[i] === value){
             sum++;
         }
@@ -101,6 +107,12 @@ function countArray(arr, value){
  * repeat([4], 3)
  */
 
-function newArray(){
-    
+function repeat(arr, times) {
+    let result = [];
+    for (let i = 0; i < times; i++) {
+        for (let j = 0; j < arr.length; j++) {
+            result.push(arr[j]);
+        }
+    }
+    return result;
 }
